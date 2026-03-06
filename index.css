@@ -21,7 +21,7 @@ body {
   color: white;
   font-family: "Wix Madefor Display", sans-serif;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 8px;
 }
 
@@ -29,12 +29,12 @@ body {
   color: white;
   font-family: "Wix Madefor Display", sans-serif;
   font-size: 6rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .wix-madefor-display-title {
   font-family: "Wix Madefor Display", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
+  font-weight: 800;
   font-style: normal;
 }
