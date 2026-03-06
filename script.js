@@ -10,4 +10,4 @@ setTimeout(() => {
         main.classList.add('fade-in');
     }, 1000);
 
-}, 2500);
+}, 1350);
