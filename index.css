@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#2b2938;
+}
+
+.welcome-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-text {
+  color: white;
+  font-family: "Wix Madefor Display", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.brand-name {
+  color: white;
+  font-family: "Wix Madefor Display", sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.wix-madefor-display-title {
+  font-family: "Wix Madefor Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
