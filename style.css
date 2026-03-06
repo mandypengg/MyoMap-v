@@ -38,3 +38,30 @@ body {
   font-weight: 800;
   font-style: normal;
 }
+
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2e2b3e;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
