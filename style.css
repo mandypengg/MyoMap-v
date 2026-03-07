@@ -128,3 +128,14 @@ body {
   font-family: "Wix Madefor Display", sans-serif;
   font-size: 1.8rem;
 }
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2b2938;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;  /* add this */
+  overflow: hidden;    /* add this */
+}
