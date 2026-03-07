@@ -44,12 +44,12 @@ const hotspots = document.querySelectorAll('.muscle-hotspot');
 hotspots.forEach(hotspot => {
   hotspot.addEventListener('click', () => {
     const muscle = hotspot.getAttribute('data-muscle');
-    window.location.href = `muscles/${muscle}.html`;
+    //window.location.href = `muscles/${muscle}.html`;
   });
 });
 
 // temporary function to find data positions for each muscle
-
+  
 model.addEventListener('click', (e) => {
   const hit = model.positionAndNormalFromPoint(e.clientX, e.clientY);
   if (hit) {
