@@ -57,15 +57,6 @@ body {
   to { opacity: 1; }
 }
 
-.main-container {
-  width: 100vw;
-  height: 100vh;
-  background-color: #2e2b3e;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
 .menu-btn {
   position: fixed;
   top: 20px;
@@ -136,20 +127,27 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
-  position: relative;  /* add this */
-  overflow: hidden;    /* add this */
+  position: relative;
+  overflow: hidden; 
 }
 
 .muscle-hotspot {
-  background: transparent;
-  border: none;
-  width: 40px;
-  height: 40px;
+  background: white;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  width: 14px;
+  height: 14px;
   cursor: pointer;
   border-radius: 50%;
+  animation: pulse 2s infinite;
 }
 
 .muscle-hotspot:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid white;
+  background: white;
+  transform: scale(1.4);
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
+  70%  { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 }
