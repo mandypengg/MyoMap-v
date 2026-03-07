@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@300..800&display=swap" rel="stylesheet">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,10 +17,20 @@
     </div>
 
     <div class="main-container" id="main">
-        <h1 style="color: white;">Main</h1>
         <button class="menu-btn" id="menuBtn">
             <img src="images/dumbbell_icon.png" alt="menu" />
         </button>
+
+        <model-viewer
+            id="anatomyModel"
+            src="human_male_body.glb"
+            alt="3D human anatomy model"
+            camera-controls
+            auto-rotate
+            rotation-per-second="30deg"
+            style="width: 500px; height: 700px; background-color: transparent;"
+        >
+            </model-viewer>
 
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
