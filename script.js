@@ -44,11 +44,13 @@ model.addEventListener('load', () => {
     });
   }
 
-  // runs while rotating
   model.addEventListener('camera-change', updateHotspots);
-
-  // runs when rotation stops to catch the final position
   model.addEventListener('finished', updateHotspots);
+
+  // catches clicks that don't trigger 'finished'
+  model.addEventListener('mouseup', () => {
+    setTimeout(updateHotspots, 50);
+  });
 
   const hotspots = document.querySelectorAll('.muscle-hotspot');
   hotspots.forEach(hotspot => {
