@@ -32,3 +32,30 @@ closeBtn.addEventListener('click', () => {
   sidebar.classList.remove('open');
   menuBtn.style.display = 'block';
 });
+
+const model = document.getElementById('anatomyModel');
+
+model.addEventListener('click', (e) => {
+  e.preventDefault();
+});
+
+const hotspots = document.querySelectorAll('.muscle-hotspot');
+
+hotspots.forEach(hotspot => {
+  hotspot.addEventListener('click', () => {
+    const muscle = hotspot.getAttribute('data-muscle');
+    window.location.href = `muscles/${muscle}.html`;
+  });
+});
+
+// temporary function to find data positions for each muscle
+
+model.addEventListener('click', (e) => {
+  const hit = model.positionAndNormalFromPoint(e.clientX, e.clientY);
+  if (hit) {
+    console.log('Position:', hit.position);
+    console.log('Normal:', hit.normal);
+  }
+});
+
+// remove after!

@@ -27,10 +27,45 @@
             alt="3D human anatomy model"
             camera-controls
             auto-rotate
-            rotation-per-second="15deg"
+            rotation-per-second="0deg"
+            interaction-prompt="none"
             style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: transparent;"
         >
-            </model-viewer>
+            <button
+                class="muscle-hotspot"
+                slot="hotspot-pec-left"
+                data-position="0.1 1.4 0.1"
+                data-normal="0 0 1"
+                data-muscle="pectoralis-major"
+            ></button>
+
+            <button
+                class="muscle-hotspot"
+                slot="hotspot-pec-right"
+                data-position="-0.1 1.4 0.1"
+                data-normal="0 0 1"
+                data-muscle="pectoralis-major"
+            ></button>
+
+            <button
+                class="muscle-hotspot"
+                slot="hotspot-bicep-left"
+                data-position="0.3133 1.3516 -0.04179"
+                data-normal="0 0 1"
+                data-muscle="bicep"
+            ></button>
+
+            <button
+                class="muscle-hotspot"
+                slot="hotspot-bicep-right"
+                data-position="-0.3027 1.34981 -0.0.3750"
+                data-normal="0 0 1"
+                data-muscle="bicep"
+            ></button>
+
+            <!-- add more muscles here -->
+
+        </model-viewer>
 
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
