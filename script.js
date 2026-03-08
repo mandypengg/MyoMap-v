@@ -27,38 +27,43 @@ const model = document.getElementById('anatomyModel');
 
 model.addEventListener('load', () => {
 
-  function updateHotspots() {
-    const hotspots = document.querySelectorAll('.muscle-hotspot');
-    hotspots.forEach(hotspot => {
-      const name = hotspot.getAttribute('slot');
-      const hotspotData = model.queryHotspot(name);
-      if (hotspotData) {
-        if (hotspotData.visible) {
-          hotspot.style.pointerEvents = 'auto';
-          hotspot.style.opacity = '1';
-        } else {
-          hotspot.style.pointerEvents = 'none';
-          hotspot.style.opacity = '0';
-        }
+  const hotspots = document.querySelectorAll('.muscle-hotspot');
+
+  hotspots.forEach(hotspot => {
+
+    // watch for data-visible attribute changes
+    const observer = new MutationObserver(() => {
+      const visible = hotspot.getAttribute('data-visible');
+      if (visible === 'false') {
+        hotspot.style.pointerEvents = 'none';
+        hotspot.style.opacity = '0';
+      } else {
+        hotspot.style.pointerEvents = 'auto';
+        hotspot.style.opacity = '1';
       }
     });
-  }
 
-  model.addEventListener('camera-change', updateHotspots);
-  model.addEventListener('finished', updateHotspots);
+    observer.observe(hotspot, { 
+      attributes: true, 
+      attributeFilter: ['data-visible'] 
+    });
 
-  // catches clicks that don't trigger 'finished'
-  model.addEventListener('mouseup', () => {
-    setTimeout(updateHotspots, 50);
-  });
-
-  const hotspots = document.querySelectorAll('.muscle-hotspot');
-  hotspots.forEach(hotspot => {
+    // click navigation
     hotspot.addEventListener('click', (e) => {
       e.stopPropagation();
       const muscle = hotspot.getAttribute('data-muscle');
       window.location.href = `muscles/${muscle}.html`;
     });
+
+  });
+
+  // TEMPORARY - find coordinates, remove when done
+  model.addEventListener('click', (e) => {
+    const hit = model.positionAndNormalFromPoint(e.clientX, e.clientY);
+    if (hit) {
+      console.log('Position:', hit.position);
+      console.log('Normal:', hit.normal);
+    }
   });
 
 });
