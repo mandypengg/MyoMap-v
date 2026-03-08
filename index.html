@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyoMap</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@300..800&display=swap"
+        rel="stylesheet">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <div class="welcome-container" id="welcome">
-      <p class="welcome-text">Welcome to</p>
-      <h1 class="brand-name">MyoMap</h1>
+        <p class="welcome-text">Welcome to</p>
+        <h1 class="brand-name">MyoMap</h1>
     </div>
 
     <div class="main-container" id="main">
@@ -21,207 +24,118 @@
             <img src="images/dumbbell_icon.png" alt="menu" />
         </button>
 
-        <model-viewer
-            id="anatomyModel"
-            src="human_male_body.glb"
-            alt="3D human anatomy model"
-            camera-controls
-            auto-rotate
-            rotation-per-second="0deg"
-            interaction-prompt="none"
-            style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: transparent;"
-        >
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-pec-left"
+        <model-viewer id="anatomyModel" src="human_male_body.glb" alt="3D human anatomy model" camera-controls
+            auto-rotate rotation-per-second="0deg" interaction-prompt="none"
+            style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: transparent;">
+            <button class="muscle-hotspot" slot="hotspot-pec-left"
                 data-position="0.10554746075834544 1.4022957837717689 0.079908735085198"
                 data-normal="0.2862052364936527 0.395026570135825 0.8729493521908007"
-                data-muscle="pectoralis-major"
-            ></button>
+                data-muscle="pectoralis-major"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-pec-right"
+            <button class="muscle-hotspot" slot="hotspot-pec-right"
                 data-position="-0.10116226983010185 1.389013265051698 0.08665179160487066"
                 data-normal="-0.2806089101043951 0.3310536003346943 0.9009229452486267"
-                data-muscle="pectoralis-major"
-            ></button>
+                data-muscle="pectoralis-major"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-trapezius"
+            <button class="muscle-hotspot" slot="hotspot-trapezius"
                 data-position="-0.004406317604741149 1.4731262628327557 -0.18734159877678203"
                 data-normal="0.18516519992277464 0.3135925417074471 -0.9313289249899961"
-                data-muscle="trapezius"
-            ></button>
+                data-muscle="trapezius"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-latissimus-dorsi-right"
+            <button class="muscle-hotspot" slot="hotspot-latissimus-dorsi-right"
                 data-position="-0.10444057694388803 1.24980710425459 -0.14488034514125764"
                 data-normal="-0.26951973463639006 -0.5680032887832186 -0.7776447624545396"
-                data-muscle="latissimus-dorsi"
-            ></button>
+                data-muscle="latissimus-dorsi"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-latissimus-dorsi-left"
+            <button class="muscle-hotspot" slot="hotspot-latissimus-dorsi-left"
                 data-position="0.10046607439140745 1.25883515249737 -0.15263167226881896"
                 data-normal="0.22267380237493778 -0.5529733444448018 -0.8028928060889684"
-                data-muscle="latissimus-dorsi"
-            ></button>
+                data-muscle="latissimus-dorsi"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-erector-spinae"
+            <button class="muscle-hotspot" slot="hotspot-erector-spinae"
                 data-position="0.0019897328606206556 1.1228819923830229 -0.09600932283307248"
                 data-normal="-0.010922746265498863 -0.10351557518084212 -0.9945678555578795"
-                data-muscle="erector-spinae"
-            ></button>
+                data-muscle="erector-spinae"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-shoulder-left"
+            <button class="muscle-hotspot" slot="hotspot-shoulder-left"
                 data-position="0.27680960932477783 1.4681751196655384 -0.10307172136382987"
-                data-normal="0.8722206292662268 0.480600540248556 -0.0908531485157416"
-                data-muscle="shoulder"
-            ></button>
+                data-normal="0.8722206292662268 0.480600540248556 -0.0908531485157416" data-muscle="shoulder"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-shoulder-right"
+            <button class="muscle-hotspot" slot="hotspot-shoulder-right"
                 data-position="-0.27866144975571894 1.4649484994366793 -0.09905051570052634"
                 data-normal="-0.8988719191011431 0.4377612012600905 0.019859600266641474"
-                data-muscle="shoulder"
-            ></button>
+                data-muscle="shoulder"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-tricep-left"
+            <button class="muscle-hotspot" slot="hotspot-tricep-left"
                 data-position="0.2746557674920656 1.3489687912947599 -0.17086058437379906"
-                data-normal="-0.2228442413109051 -0.2985245039405225 -0.928021316921994"
-                data-muscle="tricep"
-            ></button>
+                data-normal="-0.2228442413109051 -0.2985245039405225 -0.928021316921994" data-muscle="tricep"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-tricep-right"
+            <button class="muscle-hotspot" slot="hotspot-tricep-right"
                 data-position="-0.29018418128472284 1.351409262923836 -0.17295323196304282"
                 data-normal="0.005615267376666129 -0.03893512688698165 -0.9992259627664721"
-                data-muscle="tricep"
-            ></button>
+                data-muscle="tricep"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-bicep-left"
+            <button class="muscle-hotspot" slot="hotspot-bicep-left"
                 data-position="0.30605865685481015 1.3417451778716094 -0.0364040471227424"
-                data-normal="0.17769598403152337 0.1575896845741625 0.9713854171104714"
-                data-muscle="bicep"
-            ></button>
+                data-normal="0.17769598403152337 0.1575896845741625 0.9713854171104714" data-muscle="bicep"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-bicep-right"
+            <button class="muscle-hotspot" slot="hotspot-bicep-right"
                 data-position="-0.29465796669539707 1.3474808477853966 -0.03575270851973903"
-                data-normal="-0.04783982115327389 0.12903610370276486 0.9904852525167813"
-                data-muscle="bicep"
-            ></button>
+                data-normal="-0.04783982115327389 0.12903610370276486 0.9904852525167813" data-muscle="bicep"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-forearm-left"
+            <button class="muscle-hotspot" slot="hotspot-forearm-left"
                 data-position="0.46695223673747976 1.207499687371518 -0.027873169481751513"
-                data-normal="-0.09232199124747119 0.4039109426357496 0.910127793417607"
-                data-muscle="forearm"
-            ></button>
+                data-normal="-0.09232199124747119 0.4039109426357496 0.910127793417607" data-muscle="forearm"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-forearm-right"
+            <button class="muscle-hotspot" slot="hotspot-forearm-right"
                 data-position="-0.4605922943584221 1.209546551172648 -0.02975973026090024"
-                data-normal="0.15466079281075307 0.3534392124225699 0.9225837426972486"
-                data-muscle="forearm"
-            ></button>
+                data-normal="0.15466079281075307 0.3534392124225699 0.9225837426972486" data-muscle="forearm"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-rectus-abdominis"
+            <button class="muscle-hotspot" slot="hotspot-rectus-abdominis"
                 data-position="0 1.1917933518203239 0.08659825424012206"
                 data-normal="0.21584482852064701 -0.01167161996714447 0.9763579176143528"
-                data-muscle="rectus-abdominis"
-            ></button>
+                data-muscle="rectus-abdominis"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-obliques-left"
+            <button class="muscle-hotspot" slot="hotspot-obliques-left"
                 data-position="0.1416771489254951 1.1888590388176388 0.023425059329226713"
-                data-normal="0.92301702359042 -0.34005961587440325 0.1799973105733399"
-                data-muscle="obliques"
-            ></button>
+                data-normal="0.92301702359042 -0.34005961587440325 0.1799973105733399" data-muscle="obliques"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-obliques-right"
+            <button class="muscle-hotspot" slot="hotspot-obliques-right"
                 data-position="-0.13675947824879797 1.1901934062569497 0.040575232688166915"
                 data-normal="-0.852725086346956 -0.3040050089041789 0.42478333497884146"
-                data-muscle="obliques"
-            ></button>
+                data-muscle="obliques"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-quadriceps-left"
+            <button class="muscle-hotspot" slot="hotspot-quadriceps-left"
                 data-position="0.1048549869695475 0.7563448511146087 0.0850874573263189"
                 data-normal="0.1942320543394566 0.06105450017800851 0.9790537559680204"
-                data-muscle="quadriceps-femoris"
-            ></button>
+                data-muscle="quadriceps-femoris"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-quadriceps-right"
+            <button class="muscle-hotspot" slot="hotspot-quadriceps-right"
                 data-position="-0.11208242331368871 0.7354764759191963 0.08396459259154837"
                 data-normal="-0.33692674110134446 -0.008908839376550895 0.9414887167203813"
-                data-muscle="quadriceps-femoris"
-            ></button>
+                data-muscle="quadriceps-femoris"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-hamstrings-left"
+            <button class="muscle-hotspot" slot="hotspot-hamstrings-left"
                 data-position="0.12000104929223716 0.7026363403331615 -0.08413555148335024"
                 data-normal="0.1194742148902054 -0.04691505275404798 -0.9917282338430494"
-                data-muscle="hamstrings"
-            ></button>
+                data-muscle="hamstrings"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-hamstrings-right"
+            <button class="muscle-hotspot" slot="hotspot-hamstrings-right"
                 data-position="-0.12073342086339217 0.6911595642050602 -0.08340262051670673"
                 data-normal="-0.10472139521584636 -0.057383234842597074 -0.992844697695992"
-                data-muscle="hamstrings"
-            ></button>
+                data-muscle="hamstrings"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-glutes"
+            <button class="muscle-hotspot" slot="hotspot-glutes"
                 data-position="0.007902931418826087 0.9696454119880136 -0.12747393658667838"
-                data-normal="-0.14373473914498872 0.1365748756222716 -0.9801467380508305"
-                data-muscle="glutes"
-            ></button>
+                data-normal="-0.14373473914498872 0.1365748756222716 -0.9801467380508305" data-muscle="glutes"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-calf-left"
+            <button class="muscle-hotspot" slot="hotspot-calf-left"
                 data-position="0.14823240767157309 0.36672737929094745 -0.13522246087740566"
-                data-normal="-0.2482201571692861 0.14367274727443388 -0.9579900287922999"
-                data-muscle="calf"
-            ></button>
+                data-normal="-0.2482201571692861 0.14367274727443388 -0.9579900287922999" data-muscle="calf"></button>
 
-            <button
-                class="muscle-hotspot"
-                slot="hotspot-calf-right"
+            <button class="muscle-hotspot" slot="hotspot-calf-right"
                 data-position="-0.1505306492860941 0.3612650273641068 -0.13652526828590564"
-                data-normal="0.23878152406194675 0.10214524647854478 -0.9656861459027417"
-                data-muscle="calf"
-            ></button>
+                data-normal="0.23878152406194675 0.10214524647854478 -0.9656861459027417" data-muscle="calf"></button>
             <!-- add more muscles here -->
 
         </model-viewer>
@@ -234,11 +148,29 @@
 
             <p>Sources</p>
             <p>Feedback</p>
-            <p>Contact Me</p>
+
+            <div class="sidebar-footer">
+                <p class="sidebar-name">Mandy Peng</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/mandypengg" target="_blank" rel="noopener noreferrer">
+                        <img src="images/instagram_icon.png" alt="Instagram" />
+                    </a>
+                    <a href="https://linkedin.com/in/mandypengg" target="_blank" rel="noopener noreferrer">
+                        <img src="images/LinkedIn_icon.png" alt="LinkedIn" />
+                    </a>
+                    <a href="https://github.com/mandypengg" target="_blank" rel="noopener noreferrer">
+                        <img src="images/GitHub_Invertocat_Black_Clearspace.png" alt="GitHub" />
+                    </a>
+                    <a href="mailto:mandypeng2007work@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <img src="images/mail_icon.png" alt="Gmail" />
+                    </a>
+                </div>
+            </div>
         </div>
 
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
