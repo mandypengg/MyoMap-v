@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2b2938;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.left-panel {
+  width: 55%;
+  height: 100%;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: auto;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.back-btn:hover {
+  opacity: 0.7;
+}
+
+.muscle-name {
+  color: white;
+  font-family: "Wix Madefor Display", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.section-title {
+  color: white;
+  font-family: "Wix Madefor Display", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.content-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px 25px;
+}
+
+.content-box p {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Wix Madefor Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.right-panel {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.muscle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
