@@ -87,3 +87,25 @@ body {
   height: 100%;
   object-fit: contain;
 }
+
+.content-box ul {
+  list-style-position: inside;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content-box ul ul {
+  list-style-type: circle;
+  margin-left: 24px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.content-box li {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Wix Madefor Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
