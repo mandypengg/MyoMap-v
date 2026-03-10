@@ -2,7 +2,7 @@
 
 An interactive 3D human anatomy web app that lets you explore and learn about major muscle groups. Click on any muscle on the 3D model to navigate to a dedicated page with information on muscle function and recommended exercises.
 <br><br>
-🔗 Try it here: [https://myomap.vercel.app/](url)
+🔗 Try it here: https://myomap.vercel.app/
 
 ## Features
 
