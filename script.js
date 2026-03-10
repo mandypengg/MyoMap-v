@@ -58,3 +58,15 @@ model.addEventListener('load', () => {
   });
 
 });
+
+const sourcesBtn = document.getElementById('sourcesBtn');
+const sourcesPanel = document.getElementById('sourcesPanel');
+const sourcesBack = document.getElementById('sourcesBack');
+
+sourcesBtn.addEventListener('click', () => {
+  sourcesPanel.classList.add('open');
+});
+
+sourcesBack.addEventListener('click', () => {
+  sourcesPanel.classList.remove('open');
+});
