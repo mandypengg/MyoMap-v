@@ -43,9 +43,9 @@ model.addEventListener('load', () => {
       }
     });
 
-    observer.observe(hotspot, { 
-      attributes: true, 
-      attributeFilter: ['data-visible'] 
+    observer.observe(hotspot, {
+      attributes: true,
+      attributeFilter: ['data-visible']
     });
 
     // click navigation
@@ -55,15 +55,6 @@ model.addEventListener('load', () => {
       window.location.href = `muscles/${muscle}.html`;
     });
 
-  });
-
-  // TEMPORARY - find coordinates, remove when done
-  model.addEventListener('click', (e) => {
-    const hit = model.positionAndNormalFromPoint(e.clientX, e.clientY);
-    if (hit) {
-      console.log('Position:', hit.position);
-      console.log('Normal:', hit.normal);
-    }
   });
 
 });
