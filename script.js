@@ -62,11 +62,14 @@ model.addEventListener('load', () => {
 const sourcesBtn = document.getElementById('sourcesBtn');
 const sourcesPanel = document.getElementById('sourcesPanel');
 const sourcesBack = document.getElementById('sourcesBack');
+const sidebarFooter = document.querySelector('.sidebar-footer');
 
 sourcesBtn.addEventListener('click', () => {
   sourcesPanel.classList.add('open');
+  sidebarFooter.style.display = 'none';
 });
 
 sourcesBack.addEventListener('click', () => {
   sourcesPanel.classList.remove('open');
+  sidebarFooter.style.display = 'flex';
 });
