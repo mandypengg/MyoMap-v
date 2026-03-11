@@ -375,7 +375,8 @@ model-viewer {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
 }
 
 .muscle-panel-name {
@@ -388,6 +389,16 @@ model-viewer {
 .muscle-panel-section {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.muscle-panel-section:first-of-type {
+  flex: 1;
+}
+
+.muscle-panel-section:last-of-type {
+  flex: 1;
 }
 
 .muscle-panel-section-title {
@@ -407,6 +418,10 @@ model-viewer {
   font-size: 0.9rem;
   font-weight: 300;
   line-height: 1.7;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+  white-space: pre-wrap;
 }
 
 .muscle-panel-box ul {
