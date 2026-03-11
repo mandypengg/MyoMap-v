@@ -101,13 +101,14 @@ function openMusclePanel(muscleKey) {
     musclePanelImage.src = data.image;
     musclePanelImage.alt = data.name;
 
-    main.classList.add('model-shifted');
+    if (window.innerWidth > 768) {
+      main.classList.add('model-shifted');
+    }
     musclePanel.classList.add('open');
   }
 }
 
 function closeMusclePanel() {
-  dragDistance = 0;
   main.classList.remove('model-shifted');
   musclePanel.classList.remove('open');
 }
@@ -152,4 +153,48 @@ model.addEventListener('load', () => {
 
   model.addEventListener('camera-change', updateHotspotVisibility);
   updateHotspotVisibility();
+});
+
+// ── Mobile ─────────────────────────────────────
+let touchStartY = 0;
+let touchCurrentY = 0;
+
+musclePanel.addEventListener('touchstart', (e) => {
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
+
+musclePanel.addEventListener('touchmove', (e) => {
+  touchCurrentY = e.touches[0].clientY;
+  const diff = touchCurrentY - touchStartY;
+
+  // only allow dragging downward
+  if (diff > 0) {
+    musclePanel.style.transform = `translateY(${diff}px)`;
+  }
+}, { passive: true });
+
+musclePanel.addEventListener('touchend', () => {
+  const diff = touchCurrentY - touchStartY;
+
+  if (diff > 100) {
+    // swiped down far enough — close the panel
+    musclePanel.style.transition = 'transform 0.3s ease';
+    musclePanel.style.transform = 'translateY(100%)';
+    setTimeout(() => {
+      closeMusclePanel();
+      musclePanel.style.transform = '';
+      musclePanel.style.transition = '';
+    }, 300);
+  } else {
+    // not far enough — snap back
+    musclePanel.style.transition = 'transform 0.3s ease';
+    musclePanel.style.transform = 'translateY(0)';
+    setTimeout(() => {
+      musclePanel.style.transform = '';
+      musclePanel.style.transition = '';
+    }, 300);
+  }
+
+  touchStartY = 0;
+  touchCurrentY = 0;
 });

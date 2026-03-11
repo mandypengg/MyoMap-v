@@ -393,14 +393,6 @@ model-viewer {
   min-height: 0;
 }
 
-.muscle-panel-section:first-of-type {
-  flex: 1;
-}
-
-.muscle-panel-section:last-of-type {
-  flex: 1;
-}
-
 .muscle-panel-section-title {
   color: white;
   font-family: "Wix Madefor Display", sans-serif;
@@ -450,4 +442,73 @@ model-viewer {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+@media (max-width: 768px) {
+
+  .muscle-hotspot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .muscle-panel::before {
+    content: '';
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    margin: 0 auto 8px auto;
+    flex-shrink: 0;
+  }
+
+  .muscle-panel {
+    width: 100%;
+    height: 85%;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    transform: translateY(100%);
+    opacity: 1;
+    padding: 24px 20px 20px 20px;
+    border-radius: 20px 20px 0 0;
+    background-color: #2b2938;
+    gap: 16px;
+    overflow-y: auto;
+  }
+
+  .muscle-panel.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .model-shifted model-viewer {
+    transform: none;
+  }
+
+  .muscle-panel-content {
+    width: 100%;
+    flex: none;
+  }
+
+  .muscle-panel-image-wrap {
+    width: 100%;
+    height: 220px;
+    flex-shrink: 0;
+  }
+
+  .muscle-panel-name {
+    font-size: 1.5rem;
+  }
+
+  .sidebar {
+    width: 85%;
+    right: -85%;
+    border-radius: 20px;
+  }
+
+  .sidebar.open {
+    right: -10px;
+  }
+
 }
