@@ -23,7 +23,9 @@ An interactive 3D human anatomy web app that lets you explore and learn about ma
 
 ## Motivation
 
-Weightlifting is my passion. I constantly see misinformation about muscles online especially on social media, so I designed MyoMap to help streamline beginner's fitness journeys.
+One of my biggest passions is weightlifting and bodybuilding. I dedicate an hour every day to the gym and have been consistently training for over three years. When I first started, I spent a significant amount of time researching and learning how each muscle functions in order to optimize my training. However, I often see misleading or inaccurate narratives about bodybuilding circulating on social media, which can lead beginners to follow poor advice.
+<br><br>
+To address this, I built MyoMap to streamline the research process and help users find exercises that optimally target specific muscles. As new scientific studies continue to emerge on how muscles respond best to training, I plan to continuously update this website to ensure the information remains accurate and evidence-based.
 
 ## Technologies Used
 
