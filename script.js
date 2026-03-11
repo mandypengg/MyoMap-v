@@ -43,7 +43,15 @@ let muscleData = {};
 
 fetch('muscles.json')
   .then(res => res.json())
-  .then(data => { muscleData = data; });
+  .then(data => {
+    muscleData = data;
+
+    // preload all muscle images into browser cache
+    Object.values(data).forEach(muscle => {
+      const img = new Image();
+      img.src = muscle.image;
+    });
+  });
 
 // ── Panel logic ───────────────────────────────────────────────
 const musclePanel = document.getElementById('musclePanel');
