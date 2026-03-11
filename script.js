@@ -31,7 +31,6 @@ model.addEventListener('load', () => {
 
   hotspots.forEach(hotspot => {
 
-    // watch for data-visible attribute changes
     const observer = new MutationObserver(() => {
       const visible = hotspot.getAttribute('data-visible');
       if (visible === 'false') {
@@ -48,7 +47,6 @@ model.addEventListener('load', () => {
       attributeFilter: ['data-visible']
     });
 
-    // click navigation
     hotspot.addEventListener('click', (e) => {
       e.stopPropagation();
       const muscle = hotspot.getAttribute('data-muscle');
