@@ -131,9 +131,17 @@ body {
   background: none;
   border: none;
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn svg {
+  width: 1em;
+  height: 1em;
 }
 
 .sidebar-title {
@@ -186,8 +194,6 @@ body {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
-
-/* Sidebar Footer — Social Links */
 
 .sidebar-footer {
   margin-top: auto;
@@ -264,11 +270,19 @@ body {
   border: none;
   color: white;
   font-family: "Wix Madefor Display", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   text-align: left;
   margin-bottom: 20px;
   opacity: 0.7;
+}
+
+.sources-back svg {
+  width: 1em;
+  height: 1em;
 }
 
 .sources-back:hover {
